@@ -1,0 +1,44 @@
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+
+<body>
+    <div class="jumbotron">
+    <div class="card text-white bg-success mb-3" style="max-width: 30rem;">
+        <div class="card-header">Congratulations!! your order is confirmed</div>
+        <div class="card-body">
+            <h5 class="card-title">Your order has been placed and will be delivered to you shortly</h5>
+            <p class="card-text"><b>Order Details:</b></p>
+            <p class="card-text">Order id : {{ products.id }}</p>
+            <p class="card-text">Order Name: {{ products.name }}</p>
+            <p class="card-text">Bill Amount: {{ products.price }}</p><hr>
+            <p class="card-text">Your order will be delivered within 2 hrs...</p>
+        </div>
+    </div>
+    </div>
+    <footer class="bg-dark text-center text-white">
+        <div class="container p-2 pb-0">
+          <section class="mb-1">
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-facebook-f"></i></a>
+    
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-twitter"></i></a>
+    
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-google"></i></a>
+    
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-instagram"></i></a>
+    
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-linkedin-in"></i></a>
+    
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-github"></i></a>
+          </section>
+        </div>
+    
+    
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+          © 2022 Copyright:
+          <a class="text-white" href="#">Kitchen Story</a>
+        </div>
+      </footer>
+</body>

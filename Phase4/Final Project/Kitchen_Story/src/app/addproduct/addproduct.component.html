@@ -1,0 +1,82 @@
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<div class="jumbotron">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h2>Add Product Form</h2>
+                <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                    <div class="form-group">
+                        <label>Id</label>
+                        <input type="text" [(ngModel)]="product.id" formControlName="id" class="form-control"
+                            [ngClass]="{'is-invalid':submitted && f['id'].errors}">
+
+                        <div *ngIf="submitted && f['id'].errors" class="invalid-feedback">
+                            <div *ngIf="f['id'].errors['required']">
+                                The value for Id is Required
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" [(ngModel)]="product.name" formControlName="name" class="form-control"
+                            [ngClass]="{'is-invalid':submitted && f['name'].errors}">
+
+                        <div *ngIf="submitted && f['name'].errors" class="invalid-feedback">
+                            <div *ngIf="f['name'].errors['required']">
+                                The value for Name is Required
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="form-group">
+                        <label>Price</label>
+                        <input type="text" [(ngModel)]="product.price" formControlName="price" class="form-control"
+                            [ngClass]="{'is-invalid':submitted && f['price'].errors}">
+
+                        <div *ngIf="submitted && f['price'].errors" class="invalid-feedback">
+                            <div *ngIf="f['price'].errors['required']">
+                                The value for Price is Required
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-primary">Add Product</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="bg-dark text-center text-white">
+    <div class="container p-2 pb-0">
+        <section class="mb-1">
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                    class="fab fa-facebook-f"></i></a>
+
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-twitter"></i></a>
+
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-google"></i></a>
+
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                    class="fab fa-instagram"></i></a>
+
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                    class="fab fa-linkedin-in"></i></a>
+
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-github"></i></a>
+        </section>
+    </div>
+
+
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2022 Copyright:
+        <a class="text-white" href="#">Kitchen Story</a>
+    </div>
+</footer>

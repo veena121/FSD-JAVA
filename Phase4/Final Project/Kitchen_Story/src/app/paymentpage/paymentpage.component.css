@@ -1,0 +1,19 @@
+.jumbotron{
+    min-height: 70vh;
+    margin-bottom: 0px;
+}
+
+.card{
+    width: 50%;
+    margin-top: 0px;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+.card-body{
+    text-align: center;
+}
+
+.card-header{
+    text-align: center;
+}

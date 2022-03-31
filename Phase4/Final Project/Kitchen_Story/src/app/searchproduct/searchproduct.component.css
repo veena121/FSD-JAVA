@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+/* *{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Montserrat', sans-serif;
+} */
+
+.jumbotron{
+	min-height: 75vh;
+	margin-bottom: 0px;
+}
+
+.table {
+    margin-top: 1%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
+    /* margin: 0 auto !important; */
+}
+
+.wrapper{
+	padding-bottom:2%;
+	min-height: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.search_box{
+	background: #808080;
+	position: relative;
+	padding: 7px;
+	border-radius: 50px;
+	display: flex;
+}
+
+.search_box .search_btn{
+	width: 35px;
+	height: 35px;
+	border-radius: 50%;
+	background: #A9A9A9;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+	margin-right: 15px;
+	cursor: pointer;
+}
+
+.search_box .input_search{
+	outline: none;
+	border: 0;
+	background: #A9A9A9;
+	border-radius: 50px;
+	padding: 1px 20px;
+	width: 300px; 
+	height: 35px;
+	color: #fff;
+}
+
+::placeholder {
+  color: #fff;
+}
+
+::-webkit-input-placeholder {
+  color: #fff;
+}
+
+:-ms-input-placeholder {
+  color: #fff;
+}
