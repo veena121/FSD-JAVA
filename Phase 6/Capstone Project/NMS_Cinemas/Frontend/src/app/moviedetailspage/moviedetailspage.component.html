@@ -1,0 +1,80 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">
+    <img src="../../assets/images/icon.png" width="55" height="40" class="d-inline-block align-top" alt="">
+    NMS Cinemas
+  </a>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="#">All Movies</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="#">Search Movie</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="#">Check Bookings</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<router-outlet></router-outlet>
+
+
+<div class="card text-center" style="width: 50%;">
+  <img class="card-img-top" src="data:image/jpeg;base64,{{movie.image}}">
+  <div class="card-body">
+    <h5 class="card-title">{{movie.name}}</h5>
+    <p class="card-text">{{movie.description}}</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Genre : {{movie.genre}}</li>
+    <li class="list-group-item">Language : {{movie.language}}</li>
+    <li class="list-group-item">Price per ticket : {{movie.price}}</li>
+  </ul>
+  <div class="card-body text-center">
+    <form>
+      <div class="form-inline">
+        <label for="exampleFormControlInput1">No. of Tickets : </label>
+        <input type="number" class="form-control ml-2" id="exampleFormControlInput1" [(ngModel)]="ticket" name="tickets">
+      </div>
+      <div class="form-group mt-4">
+        <p>Select the time slot</p>
+        <div class="form-check" *ngFor="let option of options;">
+          <label>
+            <input type="radio"
+                   name="options"
+                   value="{{option.value}}"
+                   [(ngModel)]="option.checked"/>
+            {{option.name}}
+        </label>
+        </div>
+      </div>
+      <div class="form-group">
+        <button class="btn btn-primary" (click)="buyNow(movie)">Pay</button>
+      </div>
+      </form>
+  </div>
+</div>
+
+<footer class="bg-dark text-center text-white">
+  <div class="container p-2 pb-0">
+    <section class="mb-1">
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-facebook-f"></i></a>
+
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-twitter"></i></a>
+
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-google"></i></a>
+
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-instagram"></i></a>
+
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-linkedin-in"></i></a>
+
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-github"></i></a>
+    </section>
+  </div>
+
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2022 Copyright:
+    <a class="text-white" href="#">NMS Cinemas</a>
+  </div>
+</footer>

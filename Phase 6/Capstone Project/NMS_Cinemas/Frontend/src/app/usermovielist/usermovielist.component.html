@@ -1,0 +1,56 @@
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  
+  <body>
+    <div class="jumbotron">
+      <table class="table">
+        <thead class="table-dark">
+          <tr>
+            <th scope="col">Poster</th>
+            <th scope="col">Movie Name</th>
+            <th scope="col">Genre</th>
+            <th scope="col">Language</th>
+            <th scope="col">Show Timings</th>
+            <th scope="col">Price</th>
+            <th scope="col">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let m of movies" class="table-light">
+            <td><img src="data:image/jpeg;base64,{{m.image}}"/></td>
+            <td id="bold">{{m.name}}</td>
+            <td id="italic">{{m.genre}}</td>
+            <td>{{m.language}}</td>
+            <td>{{m.show_timings}}</td>
+            <td id="green"><b>₹</b> {{m.price}}</td>
+            <td><button type="button" class="btn btn-success btn-sm" (click)="bookMovie(m)">Buy Now</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <footer class="bg-dark text-center text-white">
+      <div class="container p-2 pb-0">
+        <section class="mb-1">
+          <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-facebook-f"></i></a>
+  
+          <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-twitter"></i></a>
+  
+          <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-google"></i></a>
+  
+          <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-instagram"></i></a>
+  
+          <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-linkedin-in"></i></a>
+  
+          <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-github"></i></a>
+        </section>
+      </div>
+  
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2022 Copyright:
+        <a class="text-white" href="#">NMS Cinemas</a>
+      </div>
+    </footer>
+  </body>
